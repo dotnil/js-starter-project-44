@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "[![Actions Status](https://github.com/dotnil/js-starter-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/dotnil/js-starter-project-44/actions)",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "main": "index.js",
   "scripts": {
