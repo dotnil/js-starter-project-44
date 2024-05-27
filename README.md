@@ -8,3 +8,5 @@
 ```bash
 make install
 ```
+
+[![asciicast](https://asciinema.org/a/LoJjHFfPz7b5oQx07FoCHllP5.svg)](https://asciinema.org/a/LoJjHFfPz7b5oQx07FoCHllP5)
