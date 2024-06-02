@@ -1,11 +1,6 @@
 import readlineSync from 'readline-sync';
-
-const getName = () => {
-  const username = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${username}!`);
-
-  return username;
-};
+import getName from './cli.js';
+import generateAndVerifyInput from './index.js';
 
 const randomNum = () => {
   const min = 0;
@@ -14,36 +9,23 @@ const randomNum = () => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-const isCorrectGuess = (num, answer) => {
-  const isEven = num % 2 === 0;
-  return answer === isEven;
-};
+const isEven = (num) => num % 2 === 0;
 
 const stringifyBoolean = (boolean) => {
   if (boolean) return 'yes';
   return 'no';
 };
 
-const generateAndVerifyNumber = (username, counter) => {
+const generateState = () => {
   const num = randomNum();
-  const answer = readlineSync.question(`Question: ${num}\n`, {
-    trueValue: ['yes'],
-    falseValue: ['no'],
-  });
+  const state = stringifyBoolean(isEven(num));
+  const input = readlineSync.question(`Question: ${num}\n`);
 
-  if (isCorrectGuess(num, answer)) {
-    const newCounter = counter + 1;
-    console.log('Correct!');
-
-    if (newCounter === 3) return console.log(`Congratulations, ${username}!`);
-    return generateAndVerifyNumber(username, newCounter);
-  }
-
-  return console.log(`'${stringifyBoolean(answer)}' is wrong answer ;(. Correct answer was '${stringifyBoolean(!answer)}'.\nLet's try again, ${username}!`);
+  return [state, input];
 };
 
 export default () => {
   const username = getName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  generateAndVerifyNumber(username, 0);
+  generateAndVerifyInput(generateState, username, 0);
 };
