@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import username from '../src/cli.js';
+import brainCalc from '../src/brain-calc-cli.js';
 
 console.log('Welcome to the Brain Games!');
 
-username();
+brainCalc();
