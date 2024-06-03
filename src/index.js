@@ -1,3 +1,5 @@
+const winCounter = 3;
+
 const generateAndVerifyInput = (generateState, username, counter) => {
   const [state, input] = generateState();
 
@@ -9,7 +11,7 @@ const generateAndVerifyInput = (generateState, username, counter) => {
   const newCounter = counter + 1;
   console.log('Correct!');
 
-  if (newCounter === 3) return console.log(`Congratulations, ${username}!`);
+  if (newCounter === winCounter) return console.log(`Congratulations, ${username}!`);
   return generateAndVerifyInput(generateState, username, newCounter);
 };
 
