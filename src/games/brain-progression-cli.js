@@ -1,14 +1,13 @@
 import readlineSync from 'readline-sync';
-import getName from './cli.js';
-import generateAndVerifyInput from './index.js';
+import getName from '../cli.js';
+import generateAndVerifyInput from '../index.js';
 
 const progressionLength = 10;
 
-const randomNum = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const makeRandomNum = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const generateProgression = (start, step) => {
-  return [...Array(progressionLength)].map((_, i) => start + step * i);
-};
+const generateProgression = (start, step) => [...Array(progressionLength)]
+  .map((_, i) => start + step * i);
 
 const maskProgression = (maskedIndex, progression) => progression.map((num, i) => {
   if (i === maskedIndex) return '..';
@@ -16,9 +15,9 @@ const maskProgression = (maskedIndex, progression) => progression.map((num, i) =
 }).join(' ');
 
 const generateState = () => {
-  const start = randomNum(1, 15);
-  const step = randomNum(1, 10);
-  const maskedIndex = randomNum(0, 9);
+  const start = makeRandomNum(1, 15);
+  const step = makeRandomNum(1, 10);
+  const maskedIndex = makeRandomNum(0, 9);
   const progression = generateProgression(start, step);
   const maskedProgression = maskProgression(maskedIndex, progression);
   const state = progression[maskedIndex];

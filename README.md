@@ -1,12 +1,47 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/dotnil/js-starter-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/dotnil/js-starter-project-44/actions)
+[![Actions Status](https://github.com/dotnil/js-starter-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/dotnil/js-starter-project-44/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/99e70f0f04af7fcd3143/maintainability)](https://codeclimate.com/github/dotnil/js-starter-project-44/maintainability)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/99e70f0f04af7fcd3143/maintainability)](https://codeclimate.com/github/dotnil/js-starter-project-44/maintainability)
+# Игры разума
+
+«Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра представляет собой серию вопросов, на которые вам нужно дать правильные ответы. Если вы ответите правильно на три вопроса подряд, игра считается пройденной. Неправильный ответ завершает игру и предлагает начать заново.
+
+
+## Игры в наборе
+
+* Калькулятор — решайте арифметические выражения.
+[![brain-calc](https://asciinema.org/a/664095.svg)](https://asciinema.org/a/664095)
+
+* Прогрессия — находите пропущенные числа в числовой последовательности.
+[![brain-progression](https://asciinema.org/a/664096.svg)](https://asciinema.org/a/664096)
+
+* Четное число — определяйте, является ли число четным.
+[![asciicast](https://asciinema.org/a/661390.svg)](https://asciinema.org/a/661390)
+
+* Наибольший общий делитель — находите наибольший общий делитель двух чисел.
+[![brain-gcd](https://asciinema.org/a/664098.svg)](https://asciinema.org/a/664098)
+
+* Простое число — определяйте, является ли число простым.
+[![brain-prime](https://asciinema.org/a/664093.svg)](https://asciinema.org/a/664093)
+
 
 ## Setup
 
+* Клонируйте репозиторий и перейдите в папку проекта.
+```bash
+git clone https://github.com/dotnil/js-starter-project-44
+cd brain-games
+```
+* Установите необходимые зависимости.
 ```bash
 make install
 ```
+* Запустите любую из игр с помощью соответствующей команды.
+```bash
+make brain-progression
+```
 
-[![asciicast](https://asciinema.org/a/LoJjHFfPz7b5oQx07FoCHllP5.svg)](https://asciinema.org/a/LoJjHFfPz7b5oQx07FoCHllP5)
+
+## Минимальные требования
+
+* Функциональный терминал или интерфейс командной строки (CLI)
+* npm (Node package manager)
+* Node.js
