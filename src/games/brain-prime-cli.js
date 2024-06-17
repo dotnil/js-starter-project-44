@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
-import getName from './cli.js';
-import generateAndVerifyInput from './index.js';
+import getName from '../cli.js';
+import generateAndVerifyInput from '../index.js';
 
-const randomNum = () => {
+const makeRandomNum = () => {
   const min = 0;
   const max = 100;
 
@@ -27,7 +27,7 @@ const stringifyBoolean = (boolean) => {
 };
 
 const generateState = () => {
-  const num = randomNum();
+  const num = makeRandomNum();
   const state = stringifyBoolean(isPrime(num));
   const input = readlineSync.question(`Question: ${num}\n`);
 

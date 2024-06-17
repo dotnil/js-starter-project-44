@@ -1,15 +1,15 @@
 import readlineSync from 'readline-sync';
-import getName from './cli.js';
-import generateAndVerifyInput from './index.js';
+import getName from '../cli.js';
+import generateAndVerifyInput from '../index.js';
 
-const randomNum = () => {
+const makeRandomNum = () => {
   const min = 0;
   const max = 10;
 
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-const randomOperator = () => {
+const makeRandomOperator = () => {
   const operators = ['+', '-', '*'];
 
   return operators[Math.floor(Math.random() * operators.length)];
@@ -23,9 +23,9 @@ const evaluateExpression = (firstNum, operator, secondNum) => {
 };
 
 const generateState = () => {
-  const firstNum = randomNum();
-  const secondNum = randomNum();
-  const operator = randomOperator();
+  const firstNum = makeRandomNum();
+  const secondNum = makeRandomNum();
+  const operator = makeRandomOperator();
   const state = evaluateExpression(firstNum, operator, secondNum);
 
   const input = Number(readlineSync.question(`Question: ${firstNum} ${operator} ${secondNum}\nYour answer: `));

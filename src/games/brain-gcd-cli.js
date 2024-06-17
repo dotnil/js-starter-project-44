@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
-import getName from './cli.js';
-import generateAndVerifyInput from './index.js';
+import getName from '../cli.js';
+import generateAndVerifyInput from '../index.js';
 
-const randomNum = (max) => {
+const makeRandomNum = (max) => {
   const min = 1;
 
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -16,8 +16,8 @@ const calculateGreatestCommonDivisor = (firstNum, secondNum) => {
 };
 
 const generateState = () => {
-  const firstNum = randomNum(100);
-  const secondNum = randomNum(100);
+  const firstNum = makeRandomNum(100);
+  const secondNum = makeRandomNum(100);
   const state = calculateGreatestCommonDivisor(firstNum, secondNum);
 
   const input = Number(readlineSync.question(`Question: ${firstNum} ${secondNum}\nYour answer: `));
