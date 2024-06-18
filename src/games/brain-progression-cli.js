@@ -1,10 +1,9 @@
 import readlineSync from 'readline-sync';
 import getName from '../cli.js';
 import generateAndVerifyInput from '../index.js';
+import makeRandomNum from '../make-random-num.js';
 
 const progressionLength = 10;
-
-const makeRandomNum = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const generateProgression = (start, step) => [...Array(progressionLength)]
   .map((_, i) => start + step * i);

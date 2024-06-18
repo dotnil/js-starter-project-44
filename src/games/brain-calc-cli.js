@@ -1,13 +1,7 @@
 import readlineSync from 'readline-sync';
 import getName from '../cli.js';
 import generateAndVerifyInput from '../index.js';
-
-const makeRandomNum = () => {
-  const min = 0;
-  const max = 10;
-
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+import makeRandomNum from '../make-random-num.js';
 
 const makeRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -23,8 +17,8 @@ const evaluateExpression = (firstNum, operator, secondNum) => {
 };
 
 const generateState = () => {
-  const firstNum = makeRandomNum();
-  const secondNum = makeRandomNum();
+  const firstNum = makeRandomNum(0, 10);
+  const secondNum = makeRandomNum(0, 10);
   const operator = makeRandomOperator();
   const state = evaluateExpression(firstNum, operator, secondNum);
 
