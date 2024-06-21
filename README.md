@@ -7,23 +7,18 @@
 
 ## Игры в наборе
 
-* Калькулятор — решайте арифметические выражения.
-[![brain-calc](https://asciinema.org/a/664095.svg)](https://asciinema.org/a/664095)
+* [Калькулятор](#brain-calc) — решайте арифметические выражения.
 
-* Прогрессия — находите пропущенные числа в числовой последовательности.
-[![brain-progression](https://asciinema.org/a/664096.svg)](https://asciinema.org/a/664096)
+* [Прогрессия](#brain-progression) — находите пропущенные числа в числовой последовательности.
 
-* Четное число — определяйте, является ли число четным.
-[![asciicast](https://asciinema.org/a/661390.svg)](https://asciinema.org/a/661390)
+* [Четное число](#brain-even) — определяйте, является ли число четным.
 
-* Наибольший общий делитель — находите наибольший общий делитель двух чисел.
-[![brain-gcd](https://asciinema.org/a/664098.svg)](https://asciinema.org/a/664098)
+* [Наибольший общий делитель](#brain-gcd) — находите наибольший общий делитель двух чисел.
 
-* Простое число — определяйте, является ли число простым.
-[![brain-prime](https://asciinema.org/a/664093.svg)](https://asciinema.org/a/664093)
+* [Простое число](#brain-prime) — определяйте, является ли число простым.
 
 
-## Setup
+## Установка и запуск игр
 
 * Клонируйте репозиторий и перейдите в папку проекта.
 ```bash
@@ -39,9 +34,29 @@ make install
 make brain-progression
 ```
 
+[![Пример установки](https://asciinema.org/a/664980.svg)](https://asciinema.org/a/664980)
+
 
 ## Минимальные требования
 
 * Функциональный терминал или интерфейс командной строки (CLI)
 * npm (Node package manager)
 * Node.js
+
+
+## Примеры прохождения игр
+
+### brain-calc:
+[![brain-calc](https://asciinema.org/a/664095.svg)](https://asciinema.org/a/664095)
+
+### brain-progression:
+[![brain-progression](https://asciinema.org/a/664096.svg)](https://asciinema.org/a/664096)
+
+### brain-even:
+[![asciicast](https://asciinema.org/a/661390.svg)](https://asciinema.org/a/661390)
+
+### brain-gcd:
+[![brain-gcd](https://asciinema.org/a/664098.svg)](https://asciinema.org/a/664098)
+
+### brain-prime:
+[![brain-prime](https://asciinema.org/a/664093.svg)](https://asciinema.org/a/664093)
