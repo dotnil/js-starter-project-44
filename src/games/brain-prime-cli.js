@@ -15,14 +15,9 @@ const isPrime = (num) => {
   return true;
 };
 
-const stringifyBoolean = (boolean) => {
-  if (boolean) return 'yes';
-  return 'no';
-};
-
 const generateState = () => {
   const num = makeRandomNum(0, 100);
-  const state = stringifyBoolean(isPrime(num));
+  const state = isPrime(num) ? 'yes' : 'no';
   const input = readlineSync.question(`Question: ${num}\n`);
 
   return [state, input];

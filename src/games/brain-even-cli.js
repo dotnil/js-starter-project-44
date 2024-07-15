@@ -5,14 +5,9 @@ import makeRandomNum from '../make-random-num.js';
 
 const isEven = (num) => num % 2 === 0;
 
-const stringifyBoolean = (boolean) => {
-  if (boolean) return 'yes';
-  return 'no';
-};
-
 const generateState = () => {
   const num = makeRandomNum(0, 100);
-  const state = stringifyBoolean(isEven(num));
+  const state = isEven(num) ? 'yes' : 'no';
   const input = readlineSync.question(`Question: ${num}\n`);
 
   return [state, input];
